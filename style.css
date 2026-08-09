@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  gap: 32px;
+}
+.mid ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.mid a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 0 8px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #1d1d1f;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+.mid {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: -20px;
+  margin-top: 5px;
+  justify-content: right;
+}
+.right {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+.mid ul li {
+  padding: 10px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  letter-spacing: -0.374px;
+  color: #1d1d1f;
+}
+
+.right ul {
+  display: flex;
+  list-style: none;
+  gap: 23px;
+  align-items: center;
+  margin-left: -27px;
+  margin-top: 5px;
+}
+.logo svg,
+.right svg {
+  display: block;
+}
+@media (max-width: 734px) {
+  /* mobile nav*/
+  .mid ul li {
+    display: none;
+  }
+}
+.topbox,
+.b2clg {
+  width: 100%;
+  background-color: #f5f5f7;
+  padding: 48px 0 56px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: #252526;
+  padding-top: 58px;
+  padding-bottom: 0;
+}
+.topbox h1,
+h4,
+.b2clg h1,
+h4 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.topbox h4,
+.b2clg h4 {
+  font-weight: 350;
+  font-size: 33px;
+  line-height: 39px;
+}
+.topbox h1,
+.b2clg h1 {
+  font-size: 44px;
+  line-height: 44px;
+  font-weight: 600;
+}
+.topbox .btns .lm,
+.shopbtn {
+  color: #ffffff;
+  background-color: #006edb;
+  border: 2px solid #006edb;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 17px;
+  line-height: 20.0002px;
+  letter-spacing: -0.224px;
+  height: 44px;
+  width: 131.7031px;
+  border-radius: 980px;
+  font-weight: 200;
+  gap: 20px;
+}
+.topbox .btns .si {
+  width: 141px;
+  height: 44px;
+  border-radius: 980px;
+  color: #0066cc;
+  background-color: #ffffff;
+  border: 1px solid #0066cc;
+  font-size: 17px;
+  line-height: 20.0002px;
+  letter-spacing: -0.224px;
+  font-weight: 200;
+}
+.topbox .btns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.iphonefam,
+.clgimg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  height: 470px;
+  overflow: hidden;
+  align-items: flex-start;
+  padding: 0;
+}
+
+.iphonefam img,
+.clgimg img {
+  width: 1430px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -279px;
+}
+
+.clgimg img {
+  margin-top: -390px;
+}
+.b2clg h4 {
+  width: 45%;
+  text-align: center;
+  margin: auto;
+}
+.b2clg {
+  position: relative;
+}
+
+.b2clg::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: white;
+  border-radius: 0;
+}
+.shopbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 38px;
+  font-weight: 300;
+}
+@media (max-width: 734px) {
+
+    /* NAVBAR */
+    nav {
+        width: 100%;
+        height: 44px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .mid ul li {
+        display: none;
+    }
+
+    .mid {
+        display: none;
+    }
+
+    .logo {
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .right ul {
+        margin: 0;
+        gap: 18px;
+    }
+
+
+    /* iPHONE TEXT SECTION */
+    .topbox {
+        width: 100%;
+        padding-top: 28px;
+        padding-bottom: 0;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .topbox h1 {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0;
+    }
+
+    .topbox h4 {
+        width: 100%;
+        font-size: 17px;
+        line-height: 22px;
+        margin: 0;
+    }
+
+
+    /* BUTTONS */
+    .topbox .btns {
+        gap: 8px;
+        margin-top: 2px;
+    }
+
+    .topbox .btns .lm,
+    .topbox .btns .si {
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .topbox .btns .lm {
+        width: 105px;
+    }
+
+    .topbox .btns .si {
+        width: 112px;
+    }
+
+
+    /* iPHONE IMAGE */
+    .iphonefam {
+        width: 100%;
+        height: 270px;
+        margin-top: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .iphonefam img {
+        width: 780px;
+        max-width: none;
+        height: auto;
+        display: block;
+        margin-top: -105px;
+    }
+
+
+    /* SECOND SECTION */
+    .b2clg {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 0;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .b2clg h1 {
+        width: 100%;
+        font-size: 28px;
+        line-height: 32px;
+        margin: 0;
+    }
+
+    .b2clg h4 {
+    display: block;
+    width: 88%;
+    margin: 0 auto;
+    text-align: center;
+    color: #252526;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 350;
+}
+
+
+    /* SHOP BUTTON */
+    .shopbtn {
+        width: 70px;
+        height: 38px;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+
+    /* COLLEGE IMAGE */
+
+.clgimg {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 0;
+}
+
+.clgimg img {
+    width: 600px;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin-top: -150px;
+}
+
+}
+
+@media (min-width: 735px) and (max-width: 1100px) {
+
+  /* NAV */
+  nav {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* iPHONE SECTION */
+  .iphonefam {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .iphonefam img {
+    width: 1100px;
+    max-width: none;
+    height: auto;
+    margin-top: -210px;
+  }
+
+
+  /* COLLEGE SECTION */
+  .b2clg {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 0;
+    gap: 10px;
+  }
+
+  .topbox h4,
+  .b2clg h4 {
+    width: 70%;
+  }
+
+
+  /* COLLEGE IMAGE */
+  .clgimg {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 0;
+}
+
+.clgimg img {
+    width: 700px;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin-top: -160px;
+}
+
+}
