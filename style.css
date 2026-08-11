@@ -86,6 +86,8 @@ nav {
     display: none;
   }
 }
+
+/* HERO SECTIONS */
 .topbox,
 .b2clg {
   width: 100%;
@@ -100,6 +102,11 @@ nav {
   padding-top: 58px;
   padding-bottom: 0;
 }
+
+.b2clg {
+  border-top: 24px solid #ffffff;
+}
+
 .topbox h1,
 h4,
 .b2clg h1,
@@ -107,6 +114,7 @@ h4 {
   display: flex;
   width: 100%;
   justify-content: center;
+  text-align: center;
   font-family:
     system-ui,
     -apple-system,
@@ -119,19 +127,28 @@ h4 {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+    z-index: 2;
 }
+
 .topbox h4,
 .b2clg h4 {
   font-weight: 350;
-  font-size: 33px;
-  line-height: 39px;
+  font-size: clamp(17px, 3vw, 33px);
+  line-height: 1.2;
 }
 .topbox h1,
 .b2clg h1 {
-  font-size: 44px;
-  line-height: 44px;
+  font-size: clamp(28px, 5vw, 44px);
+  line-height: 1.1;
   font-weight: 600;
 }
+
+.b2clg h4 {
+  width: 45%;
+  text-align: center;
+  margin: auto;
+}
+
 .topbox .btns .lm,
 .shopbtn {
   color: #ffffff;
@@ -158,6 +175,9 @@ h4 {
   font-weight: 200;
   gap: 20px;
 }
+.shopbtn{
+  z-index: 2;
+}
 .topbox .btns .si {
   width: 141px;
   height: 44px;
@@ -174,50 +194,37 @@ h4 {
   display: flex;
   gap: 20px;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
+
+
 .iphonefam,
 .clgimg {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  margin-top: 10px;
-  height: 470px;
+  aspect-ratio: 16 / 6;
   overflow: hidden;
-  align-items: flex-start;
-  padding: 0;
+  margin-top: -110px;
+  position: relative;
+  z-index: 1;
 }
 
 .iphonefam img,
 .clgimg img {
-  width: 1430px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: -279px;
-}
-
-.clgimg img {
-  margin-top: -390px;
-}
-.b2clg h4 {
-  width: 45%;
-  text-align: center;
-  margin: auto;
-}
-.b2clg {
-  position: relative;
-}
-
-.b2clg::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
   width: 100%;
-  height: 20px;
-  background: white;
-  border-radius: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%;
+  display: block;
 }
+
+.clgimg {
+  aspect-ratio: 16 / 5.5;
+}
+.clgimg img {
+  object-position: center 60%;
+}
+
 .shopbtn {
   display: flex;
   justify-content: center;
@@ -226,191 +233,152 @@ h4 {
   height: 38px;
   font-weight: 300;
 }
+
 @media (max-width: 734px) {
+  /* NAVBAR */
+  nav {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
 
-    /* NAVBAR */
-    nav {
-        width: 100%;
-        height: 44px;
-        padding: 0 16px;
-        box-sizing: border-box;
-        justify-content: space-between;
-    }
+  .mid ul li {
+    display: none;
+  }
 
-    .mid ul li {
-        display: none;
-    }
+  .mid {
+    display: none;
+  }
 
-    .mid {
-        display: none;
-    }
+  .logo {
+    margin: 0;
+    justify-content: flex-start;
+  }
 
-    .logo {
-        margin: 0;
-        justify-content: flex-start;
-    }
+  .right {
+    margin: 0;
+  }
 
-    .right {
-        margin: 0;
-    }
+  .right ul {
+    margin: 0;
+    gap: 18px;
+  }
 
-    .right ul {
-        margin: 0;
-        gap: 18px;
-    }
+  /* iPHONE TEXT SECTION */
+  .topbox {
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 0;
+    gap: 10px;
+    box-sizing: border-box;
+  }
 
+  /* BUTTONS */
+  .topbox .btns {
+    gap: 8px;
+    margin-top: 2px;
+    
+  }
 
-    /* iPHONE TEXT SECTION */
-    .topbox {
-        width: 100%;
-        padding-top: 28px;
-        padding-bottom: 0;
-        gap: 10px;
-        box-sizing: border-box;
-    }
+  .topbox .btns .lm,
+  .topbox .btns .si {
+    height: 38px;
+    font-size: 14px;
+  }
 
-    .topbox h1 {
-        font-size: 28px;
-        line-height: 32px;
-        margin: 0;
-    }
+  .topbox .btns .lm {
+    width: 105px;
+  }
 
-    .topbox h4 {
-        width: 100%;
-        font-size: 17px;
-        line-height: 22px;
-        margin: 0;
-    }
+  .topbox .btns .si {
+    width: 112px;
+  }
 
+  /* iPHONE IMAGE */
+  .iphonefam {
+    aspect-ratio: 16 / 9;
+    margin-top: -75px;
+  }
 
-    /* BUTTONS */
-    .topbox .btns {
-        gap: 8px;
-        margin-top: 2px;
-    }
+  /* SECOND SECTION */
+  .b2clg {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 0;
+    gap: 10px;
+    box-sizing: border-box;
+  }
 
-    .topbox .btns .lm,
-    .topbox .btns .si {
-        height: 38px;
-        font-size: 14px;
-    }
-
-    .topbox .btns .lm {
-        width: 105px;
-    }
-
-    .topbox .btns .si {
-        width: 112px;
-    }
-
-
-    /* iPHONE IMAGE */
-    .iphonefam {
-        width: 100%;
-        height: 270px;
-        margin-top: 0;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0;
-    }
-
-    .iphonefam img {
-        width: 780px;
-        max-width: none;
-        height: auto;
-        display: block;
-        margin-top: -105px;
-    }
-
-
-    /* SECOND SECTION */
-    .b2clg {
-        width: 100%;
-        padding-top: 40px;
-        padding-bottom: 0;
-        gap: 10px;
-        box-sizing: border-box;
-    }
-
-    .b2clg h1 {
-        width: 100%;
-        font-size: 28px;
-        line-height: 32px;
-        margin: 0;
-    }
-
-    .b2clg h4 {
+  .b2clg h4 {
     display: block;
     width: 88%;
     margin: 0 auto;
     text-align: center;
     color: #252526;
-    font-size: 17px;
-    line-height: 22px;
     font-weight: 350;
-}
+  }
 
+  /* SHOP BUTTON */
+  .shopbtn {
+    width: 70px;
+    height: 38px;
+    font-size: 14px;
+    margin-top: 2px;
+  }
 
-    /* SHOP BUTTON */
-    .shopbtn {
-        width: 70px;
-        height: 38px;
-        font-size: 14px;
-        margin-top: 2px;
-    }
-
-
-    /* COLLEGE IMAGE */
-
-.clgimg {
-    width: 100%;
-    height: 270px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0;
-    margin-top: 0;
-}
-
-.clgimg img {
-    width: 600px;
-    max-width: none;
-    height: auto;
-    display: block;
-    margin-top: -150px;
-}
-
+  /* COLLEGE IMAGE */
+  .clgimg {
+    aspect-ratio: 16 / 9;
+    margin-top: -65px;
+  }
 }
 
 @media (min-width: 735px) and (max-width: 1100px) {
 
-  /* NAV */
   nav {
     width: 100%;
     box-sizing: border-box;
+    gap: 12px;
+    padding: 0 12px;
   }
 
+  .mid ul {
+    gap: 0;
+  }
 
-  /* iPHONE SECTION */
+  .mid ul li {
+    padding: 6px;
+  }
+
+  .mid a {
+    padding: 0 4px;
+    font-size: 11px;
+  }
+
+  .topbox h4,
+  .b2clg h4 {
+    width: 70%;
+  }
+
   .iphonefam {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    aspect-ratio: 16 / 9;
+    margin-top: -140px;
   }
 
   .iphonefam img {
-    width: 1100px;
-    max-width: none;
-    height: auto;
-    margin-top: -210px;
+    object-position: center 80%;
   }
 
+  .clgimg {
+    aspect-ratio: 16 / 9;
+    margin-top: -170px;
+  }
+
+  .clgimg img {
+    object-position: center 75%;
+  }
 
   /* COLLEGE SECTION */
   .b2clg {
@@ -420,31 +388,4 @@ h4 {
     padding-bottom: 0;
     gap: 10px;
   }
-
-  .topbox h4,
-  .b2clg h4 {
-    width: 70%;
-  }
-
-
-  /* COLLEGE IMAGE */
-  .clgimg {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0;
-    margin-top: 0;
-}
-
-.clgimg img {
-    width: 700px;
-    max-width: none;
-    height: auto;
-    display: block;
-    margin-top: -160px;
-}
-
 }
