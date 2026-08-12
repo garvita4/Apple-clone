@@ -19,20 +19,30 @@ body {
 }
 
 /* NAVBAR — translucent */
+/* NAVBAR — FIXED GLASS / TRANSLUCENT */
 nav {
   width: 100%;
   height: 44px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 0 20px;
   gap: 32px;
-  position: sticky;
+
+  position: fixed;
   top: 0;
-  z-index: 100;
-  background-color: rgba(255, 255, 255, 0.75);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  left: 0;
+
+  z-index: 9999;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 .mid ul {
   list-style: none;
@@ -148,7 +158,7 @@ h4 {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-    z-index: 2;
+  z-index: 2;
 }
 
 .topbox h4,
@@ -196,7 +206,7 @@ h4 {
   font-weight: 200;
   gap: 20px;
 }
-.shopbtn{
+.shopbtn {
   z-index: 2;
 }
 .topbox .btns .si {
@@ -218,7 +228,6 @@ h4 {
   position: relative;
   z-index: 2;
 }
-
 
 .iphonefam,
 .clgimg {
@@ -274,7 +283,6 @@ h4 {
   border-top: 24px solid #ffffff;
   box-sizing: border-box;
 }
-
 
 .macair h1,
 .macair h4 {
@@ -390,7 +398,6 @@ h4 {
   z-index: 2;
 }
 
-
 .macairimg::after {
   content: "";
   position: absolute;
@@ -405,7 +412,6 @@ h4 {
 
   pointer-events: none;
 }
-
 
 @media (max-width: 734px) {
   /* NAVBAR */
@@ -452,7 +458,6 @@ h4 {
   .topbox .btns {
     gap: 8px;
     margin-top: 2px;
-    
   }
 
   .topbox .btns .lm,
@@ -539,7 +544,6 @@ h4 {
 }
 
 @media (min-width: 735px) and (max-width: 1100px) {
-
   nav {
     width: 100%;
     box-sizing: border-box;
@@ -641,7 +645,6 @@ h4 {
     object-fit: cover;
     object-position: center center;
   }
-
 }
 /* =========================================================
    ADAPTIVE IPHONE + COLLEGE SECTIONS
@@ -664,7 +667,6 @@ h4 {
   font-weight: 350;
 }
 
-
 /* ---------- BUTTONS ---------- */
 
 .topbox .btns,
@@ -674,7 +676,6 @@ h4 {
   align-items: center;
   gap: clamp(8px, 1.5vw, 20px);
 }
-
 
 /* Learn More */
 .topbox .btns .lm,
@@ -687,7 +688,6 @@ h4 {
   border-radius: 980px;
 }
 
-
 /* Secondary button */
 .topbox .btns .si,
 .macair .btns .buy {
@@ -699,7 +699,6 @@ h4 {
   border-radius: 980px;
 }
 
-
 /* ---------- COLLEGE SUBTITLE ---------- */
 
 .b2clg h4 {
@@ -709,14 +708,12 @@ h4 {
   margin-right: auto;
 }
 
-
 /* =========================================================
    TABLET
    735px - 1100px
    ========================================================= */
 
 @media (min-width: 735px) and (max-width: 1100px) {
-
   /* iPhone */
   .topbox {
     padding-top: clamp(35px, 5vw, 58px);
@@ -748,7 +745,6 @@ h4 {
     width: clamp(105px, 13vw, 130px);
   }
 
-
   /* College */
   .b2clg {
     padding-top: clamp(35px, 5vw, 45px);
@@ -766,13 +762,11 @@ h4 {
   }
 }
 
-
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 734px) {
-
   .topbox {
     padding-top: clamp(24px, 7vw, 32px);
     gap: clamp(7px, 2vw, 10px);
