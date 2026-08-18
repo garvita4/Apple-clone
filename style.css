@@ -181,7 +181,7 @@ h4 {
 }
 
 .topbox .btns .lm,
-.shopbtn {
+.shopbtn, .lm{
   color: #ffffff;
   background-color: #006edb;
   border: 2px solid #006edb;
@@ -347,7 +347,8 @@ h4 {
   font-weight: 200;
 }
 
-.macair .btns .buy {
+.macair .btns .buy,
+.product-buttons .buy  {
   color: #0066cc;
   background-color: #ffffff;
   border: 1px solid #0066cc;
@@ -813,4 +814,156 @@ h4 {
     height: clamp(36px, 10vw, 38px);
     font-size: clamp(13px, 4vw, 14px);
   }
+}
+.product-card h2 {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  font-size: clamp(26px, 2.4vw, 32px);
+  line-height: 1.1;
+  font-weight: 600;
+
+  text-align: center;
+}
+.product-card p {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.2;
+  font-weight: 350;
+
+  text-align: center;
+}
+.product-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.product-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 455px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 42px 20px 0;
+  box-sizing: border-box;
+}
+.ipad-air,
+.macbook-pro,
+.apple-watch,
+.ipad-pro,
+.trade-in,
+.apple-card {
+  background-color: #f5f5f7;
+}
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  z-index: 1;
+}
+.product-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+}
+.product-card h2,
+.product-card p,
+.product-buttons {
+  position: relative;
+  z-index: 2;
+}
+.product-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.macbook-pro,
+.ipad-pro  {
+  background-color: #000000;
+  color: #ffffff;
+}
+.macbook-pro .product-buttons .buy,
+.ipad-pro .product-buttons .buy{
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.product-grid {
+  border-top: 12px solid #ffffff;
+}
+.product-card .product-image img {
+  object-position: center center;
+}
+.ipad-air .product-image img {
+  object-position: center 55%;
+}
+/* GRID - TEXT OVER IMAGE WITH PROPER SPACING */
+
+.product-image {
+  top: 0;
+  height: 100%;
+}
+
+.product-card {
+  padding-top: 48px;
+}
+
+.product-card h2 {
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  margin-bottom: 14px;
+}
+
+.product-buttons {
+  margin-top: 0;
 }
