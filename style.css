@@ -181,7 +181,8 @@ h4 {
 }
 
 .topbox .btns .lm,
-.shopbtn, .lm{
+.shopbtn,
+.lm {
   color: #ffffff;
   background-color: #006edb;
   border: 2px solid #006edb;
@@ -348,7 +349,7 @@ h4 {
 }
 
 .macair .btns .buy,
-.product-buttons .buy  {
+.product-buttons .buy {
   color: #0066cc;
   background-color: #ffffff;
   border: 1px solid #0066cc;
@@ -858,13 +859,14 @@ h4 {
 .product-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+  padding: 12px;
 }
 .product-card {
   width: 100%;
   min-width: 0;
-  min-height: 455px;
+  min-height: 580px;
 
   position: relative;
   overflow: hidden;
@@ -888,12 +890,10 @@ h4 {
 }
 .product-image {
   position: absolute;
-  top: 0;
   left: 0;
-
+  bottom: 0;
   width: 100%;
-  height: 100%;
-
+  height: 62%;
   overflow: hidden;
   z-index: 1;
 }
@@ -926,12 +926,12 @@ h4 {
   margin-top: 14px;
 }
 .macbook-pro,
-.ipad-pro  {
+.ipad-pro {
   background-color: #000000;
   color: #ffffff;
 }
 .macbook-pro .product-buttons .buy,
-.ipad-pro .product-buttons .buy{
+.ipad-pro .product-buttons .buy {
   color: #ffffff;
   background-color: transparent;
   border-color: #ffffff;
@@ -966,4 +966,245 @@ h4 {
 
 .product-buttons {
   margin-top: 0;
+}
+
+.trade-in .product-buttons .lm {
+  width: auto;
+  min-width: 0;
+  padding: 10px 18px;
+  font-size: 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card .product-buttons button {
+  width: auto;
+  min-width: 0;
+  padding: 10px 18px;
+  font-size: 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/*PRODUCT GRID - DESKTOP SPACING*/
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.product-card h2 {
+  margin: 0 0 6px;
+}
+.product-card p {
+  margin: 0 0 18px;
+}
+.product-card .product-buttons {
+  margin: 0;
+}
+/* =========================================================
+   PRODUCT GRID - TABLET
+   735px - 1100px
+   ========================================================= */
+
+@media (min-width: 735px) and (max-width: 1100px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .product-card {
+        position: relative;
+        width: 100%;
+        height: 560px;
+        min-height: 560px;
+        padding: 38px 20px 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .product-card h2 {
+        position: relative;
+        z-index: 3;
+        font-size: 36px;
+        line-height: 1.08;
+        margin: 0 0 8px;
+    }
+
+    .product-card p {
+        position: relative;
+        z-index: 3;
+        font-size: 20px;
+        line-height: 1.2;
+        margin: 0 0 18px;
+    }
+
+    .product-card .product-buttons {
+        position: relative;
+        z-index: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    .product-card .product-buttons button {
+        width: auto;
+        min-width: 0;
+
+        padding: 10px 18px;
+
+        font-size: 16px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    /* FULL CARD IMAGE */
+    .product-card .product-image {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .product-card .product-image picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-card .product-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+        max-width: none;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* =========================================================
+   PRODUCT GRID - MOBILE
+   734px and below
+   ========================================================= */
+
+@media (max-width: 734px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 4px;
+    }
+
+    .product-card {
+        position: relative;
+        width: 100%;
+        height: 620px;
+        min-height: 620px;
+        padding: 34px 16px 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .product-card h2 {
+        position: relative;
+        z-index: 3;
+        font-size: 30px;
+        line-height: 1.1;
+        margin: 0 0 7px;
+    }
+
+    .product-card p {
+        position: relative;
+        z-index: 3;
+        font-size: 18px;
+        line-height: 1.2;
+        margin: 0 0 18px;
+    }
+
+    .product-card .product-buttons {
+        position: relative;
+        z-index: 3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+        flex-wrap: nowrap;
+
+        width: 100%;
+        margin: 0;
+    }
+
+    .product-card .product-buttons button {
+        width: auto;
+        min-width: 0;
+
+        padding: 9px 16px;
+
+        font-size: 15px;
+        line-height: 1.2;
+
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
+
+    /* FULL CARD IMAGE */
+    .product-card .product-image {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .product-card .product-image picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-card .product-image img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+        max-width: none;
+
+        object-fit: cover;
+        object-position: center center;
+    }
 }
